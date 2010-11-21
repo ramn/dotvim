@@ -22,6 +22,7 @@ map \b :FufBuffer
 map \f :FufCoverageFile 
 au InsertEnter *.* checktime
 set ic
+set foldmethod=marker
 
 augroup myfiletypes
   " Clear old autocmds in group
