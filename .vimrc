@@ -31,5 +31,3 @@ augroup myfiletypes
   autocmd FileType yaml set ai sw=2 sts=2 et
 augroup END
 
-source ~/.vim/plugin/lodgeit.vim
-
