@@ -15,7 +15,6 @@ filetype on " Enable filetype detection
 filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
 compiler ruby " Enable compiler support for ruby
-set runtimepath=~/.vim/vim-fuzzyfinder/,~/.vim/vim-l9/,~/.vim/nerdtree/,~/.vim/vim-rails/,~/.vim/vim-haml/,$VIMRUNTIME
 colorscheme slate
 set lines=62 columns=120
 map \b :FufBuffer 
