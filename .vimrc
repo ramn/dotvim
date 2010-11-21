@@ -31,3 +31,10 @@ augroup myfiletypes
   autocmd FileType yaml set ai sw=2 sts=2 et
 augroup END
 
+
+" Are we in GVim or vim in Terminal?
+if (has("gui_macvim") || has("gui_gnome")) && has("gui_running")
+  "
+else
+  set mouse=a
+endif
