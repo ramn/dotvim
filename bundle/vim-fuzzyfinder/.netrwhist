@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/ramn/Documents/rails_projects/handelsoasen'
+let g:netrw_dirhist_2='/home/ramn/Documents/rails_projects/humf_rails_09'
+let g:netrw_dirhist_3='/home/ramn/Documents/rails_projects/handelsoasen'
+let g:netrw_dirhist_4='/home/ramn/Documents/ruby/ror_ecommerce'
+let g:netrw_dirhist_5='/home/ramn/Documents/ruby/govsgo'
+let g:netrw_dirhist_6='/home/ramn/Documents/ruby/laborations/wxruby/wxruby-ruby19/wxruby-ruby19-2.0.1-x86-linux'
