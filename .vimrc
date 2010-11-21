@@ -38,3 +38,7 @@ if (has("gui_macvim") || has("gui_gnome")) && has("gui_running")
 else
   set mouse=a
 endif
+
+map \c :call CommentLineToEnd('#')<CR>+
+" map ,* :call CommentLinePincer('/* ', ' */')<CR>+
+
