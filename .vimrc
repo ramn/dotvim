@@ -11,6 +11,7 @@ set dir=~/tmp
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
+filetype off " Shut it off - to reload it! Needed by pathogen.
 filetype on " Enable filetype detection
 filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
