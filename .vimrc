@@ -18,7 +18,7 @@ filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
 compiler ruby " Enable compiler support for ruby
 colorscheme slate
-set lines=62 columns=120
+"set lines=62 columns=120 "sets window size
 map \b :FufBuffer 
 "map \f :FufFile **/
 map \f :FufCoverageFile 
