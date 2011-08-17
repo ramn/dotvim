@@ -56,3 +56,6 @@ if (has('mac'))
   set clipboard=unnamed
 endif
 
+" Map esc-w to write file
+nnoremap w :w
+
