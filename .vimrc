@@ -58,4 +58,5 @@ endif
 
 " Map esc-w to write file
 nnoremap w :w
+inoremap w  :w
 
