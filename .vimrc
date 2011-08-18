@@ -57,6 +57,6 @@ if (has('mac'))
 endif
 
 " Map esc-w to write file
-nnoremap w :w
-inoremap w  :w
+nnoremap <Esc>w :w<CR>
+inoremap <Esc>w <Esc>:w<CR>
 
