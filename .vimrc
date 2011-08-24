@@ -61,3 +61,6 @@ nnoremap <Esc>w :w<CR>
 inoremap <Esc>w <Esc>:w<CR>
 
 nnoremap <C-i> <C-w>w
+
+" NERDTree ignores
+let NERDTreeIgnore = ['\.pyc$']
