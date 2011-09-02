@@ -31,6 +31,7 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs
   autocmd FileType yaml set ai sw=2 sts=2 et
+  autocmd FileType python set omnifunc=pythoncomplete#Complete
 augroup END
 
 
