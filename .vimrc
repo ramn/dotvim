@@ -22,7 +22,19 @@ colorscheme slate
 map \b :FufBuffer 
 "map \f :FufFile **/
 map \f :FufCoverageFile 
-au InsertEnter * checktime
+
+function CatchedChecktime()
+    try
+        checktime
+    catch
+    endtry
+endfunction
+
+augroup myglobal
+    autocmd!
+    au InsertEnter * call CatchedChecktime()
+augroup END
+
 set ic
 set foldmethod=marker
 
