@@ -75,3 +75,10 @@ inoremap <Esc>w <Esc>:w<CR>
 
 " NERDTree ignores
 let NERDTreeIgnore = ['\.pyc$']
+
+
+" Netrw
+let g:netrw_browse_split = 2
+let g:netrw_altv = 1
+let g:netrw_liststyle = 3
+
