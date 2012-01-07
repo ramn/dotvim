@@ -64,6 +64,9 @@ noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 nnoremap <C-F5> :FufRenewCache <CR>
+if (has('mac'))
+  nnoremap <F5> :FufRenewCache <CR>
+endif
 
 if (has('mac'))
   set clipboard=unnamed
