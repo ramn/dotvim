@@ -78,6 +78,7 @@ inoremap <Esc>w <Esc>:w<CR>
 
 " NERDTree ignores
 let NERDTreeIgnore = ['\.pyc$']
+nnoremap [24~ :NERDTreeToggle<CR>
 
 
 " Netrw
