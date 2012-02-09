@@ -10,6 +10,8 @@ set expandtab
 set nowrap
 set dir=~/tmp
 
+set grepprg=git\ grep\ $*
+
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
 filetype off " Shut it off - to reload it! Needed by pathogen.
@@ -75,6 +77,13 @@ endif
 " Map esc-w to write file
 nnoremap <Esc>w :w<CR>
 inoremap <Esc>w <Esc>:w<CR>
+
+" Mappings for tabs:
+" meta-t       = > :tabnew
+" meta-shift-t = > :tabclose
+nnoremap t :tabnew<CR>
+nnoremap T :tabclose<CR>
+
 
 " NERDTree ignores
 let NERDTreeIgnore = ['\.pyc$']
