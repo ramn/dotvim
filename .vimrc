@@ -21,9 +21,6 @@ filetype plugin on " Enable filetype-specific plugins
 compiler ruby " Enable compiler support for ruby
 colorscheme slate
 "set lines=62 columns=120 "sets window size
-map \b :FufBuffer 
-"map \f :FufFile **/
-map \f :FufCoverageFile 
 
 function CatchedChecktime()
     try
@@ -65,10 +62,6 @@ noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-nnoremap <C-F5> :FufRenewCache <CR>
-if (has('mac'))
-  nnoremap <F5> :FufRenewCache <CR>
-endif
 
 if (has('mac'))
   set clipboard=unnamed
