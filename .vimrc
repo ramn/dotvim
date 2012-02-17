@@ -88,3 +88,6 @@ let g:netrw_browse_split = 2
 let g:netrw_altv = 1
 let g:netrw_liststyle = 3
 
+" ctrlp config
+let g:ctrlp_jump_to_buffer = 1
+
