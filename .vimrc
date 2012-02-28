@@ -94,3 +94,9 @@ let g:ctrlp_jump_to_buffer = 1
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv
+
+" Easy split navigation
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
