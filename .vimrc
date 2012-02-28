@@ -91,3 +91,6 @@ let g:netrw_liststyle = 3
 " ctrlp config
 let g:ctrlp_jump_to_buffer = 1
 
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
