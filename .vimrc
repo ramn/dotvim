@@ -18,7 +18,7 @@ filetype off " Shut it off - to reload it! Needed by pathogen.
 filetype on " Enable filetype detection
 filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
-compiler ruby " Enable compiler support for ruby
+"compiler ruby " Enable compiler support for ruby
 colorscheme slate
 "set lines=62 columns=120 "sets window size
 
