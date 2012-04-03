@@ -10,7 +10,7 @@ set expandtab
 set nowrap
 set dir=~/tmp
 
-set grepprg=git\ grep\ $*
+set grepprg=git\ grep\ -n\ $*
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
