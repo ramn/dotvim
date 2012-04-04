@@ -10,7 +10,7 @@ set expandtab
 set nowrap
 set dir=~/tmp
 
-set grepprg=git\ grep\ $*
+set grepprg=git\ grep\ -n\ $*
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
@@ -91,6 +91,9 @@ let g:netrw_liststyle = 3
 
 " ctrlp config
 let g:ctrlp_jump_to_buffer = 1
+let g:ctrlp_custom_ignore = {
+\   'file': '\.pyc$'
+\ }
 
 " Reselect visual block after indent/outdent
 vnoremap < <gv
