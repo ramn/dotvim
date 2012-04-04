@@ -90,6 +90,9 @@ let g:netrw_liststyle = 3
 
 " ctrlp config
 let g:ctrlp_jump_to_buffer = 1
+let g:ctrlp_custom_ignore = {
+\   'file': '\.pyc$'
+\ }
 
 " Reselect visual block after indent/outdent
 vnoremap < <gv
