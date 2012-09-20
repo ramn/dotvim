@@ -9,6 +9,7 @@ set tabstop=2
 set expandtab
 set nowrap
 set dir=~/tmp
+set textwidth=0 " Turns off insertion of line breaks in long lines
 
 set grepprg=git\ grep\ -n\ $*
 
