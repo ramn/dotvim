@@ -16,3 +16,6 @@
 [submodule "bundle/vim-clojure"]
 	path = bundle/vim-clojure
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "bundle/mustache.vim"]
+	path = bundle/mustache.vim
+	url = git://github.com/juvenn/mustache.vim.git
