@@ -106,3 +106,7 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+
+" Render markdown buffer as html
+nnoremap <F8> :w ! markdown_py \| lynx -stdin<enter>
+
