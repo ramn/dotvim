@@ -1,6 +1,6 @@
 source /etc/vim/vimrc
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 set nobackup
 set shiftwidth=2
