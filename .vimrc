@@ -83,7 +83,7 @@ nnoremap T :tabclose<CR>
 
 " NERDTree ignores
 let NERDTreeIgnore = ['\.pyc$']
-nnoremap [24~ :NERDTreeToggle<CR>
+nnoremap <F12> :NERDTreeToggle<CR>
 
 
 " Netrw
