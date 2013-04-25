@@ -56,11 +56,6 @@ else
   set mouse=a
 endif
 
-map \c :call CommentLineToEnd('#')<CR>+
-map \\ :call CommentLineToEnd('//')<CR>+
-noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
-" map ,* :call CommentLinePincer('/* ', ' */')<CR>+
-
 " Press Space to turn off highlighting and clear any message already
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
