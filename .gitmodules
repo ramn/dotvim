@@ -22,6 +22,3 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/comments.vim"]
-	path = bundle/comments.vim
-	url = https://github.com/vim-scripts/comments.vim
