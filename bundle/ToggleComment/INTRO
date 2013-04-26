@@ -1,0 +1,56 @@
+ToggleComment: Simple, flexibel, language-independent mappings to de-/commentify
+
+>created by
+Andres Völter
+
+>script type
+utility
+
+>description
+This utility draws heavily from Vim Tip #271 and additional note 2002-07-06.
+Yet it's different in one or more aspects from other tips and scripts I'm
+aware off.
+
+Features:
+
+- de-/commtify lines in normal mode (with count) and visual mode
+- use the same keys for commenting and decommenting
+- language independent, you define different mappings for various languages
+  and/or one comment-command for different filetypes
+- simple and flexibel, to change the comment characters from '#' to '# ' e.g.,
+  just change a mapping in your .vimrc, not the script
+- comment-style: comments are indented like the uncommented line
+- no hlsearch problem, last search pattern and .-command are preserved
+- inserted comment characters are protected from further expansion
+- might be adapted to other comment styles (first column comments, ...)
+
+Example:
+
+Commented text looks like this:
+
+    #if uncommented:
+        /* comment the line */
+    <!-- else: -->
+        // uncomment the
+        // lines
+        no comment
+
+You would put or remove this comments (cursor on the first line), by typing:
+    ,# ,* ,< 2,/
+
+>installation
+Put the file ToggleComment.vim in your plugin directory or just copy/paste
+the two functions in your .vimrc file.
+
+Then define mappings in your .vimrc, like for example:
+
+map ,# :call CommentLineToEnd('#')<CR>+
+map ,* :call CommentLinePincer('/* ', ' */')<CR>+
+
+and/or map Meta-c (Alt-c) and Meta-Shift-C for different FileTypes.
+
+For more detailed description and installation instructions see the README file.
+
+
+vim:ts=4 sw=4 et ff=unix
+$Id: INTRO,v 1.2 2004/03/28 10:16:04 Andreas Exp $

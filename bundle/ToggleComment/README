@@ -1,0 +1,184 @@
+ToggleComment.vim
+
+INSTALL
+
+- put the file ToggleComment.vim in your plugin directory, for Unix this is:
+  (for other systems see hints a the end of this file)
+
+    $HOME/.vim/plugin/ToggleComment.vim
+
+- define some mappings in your vimrc file (for unix this is $HOME/.vimrc),
+  according to your needs; see below for an recommended example,
+  in the simplest case this looks like this:
+
+    " mappings for ToggleComment in $HOME/.vimrc
+    map ,# :call CommentLineToEnd('#')<CR>+
+    map ,* :call CommentLinePincer('/* ', ' */')<CR>+
+
+- here is a list of suggested comment characters (far from exhaustive):
+
+"   ,#      # sh, make, python, ruby, tcl, perl, php, apache
+"   ,/      // c, java, php
+"   ,>      > mail
+"   ,"      " vim
+"   ,%      % tex
+"   ,;      ; lisp, scheme, dosini
+"   ,-      -- haskell, sql, lua
+"   ,*      /* c, cpp, php */
+"   ,<      <!-- xml, html -->
+
+- see filetype.vim and syntax/* in your Vim installation directory ($VIMRUNTIME)
+  for programming languages and their comments
+- this is a recommended example to put into your vimrc file and change
+  to suite your needs (e.g. space after the comment characters)
+
+=== CUT HERE ===================================================================
+" Mappings fuer plugin/ToggleComment.vim
+
+noremap <silent> ,# :call CommentLineToEnd('# ')<CR>+
+noremap <silent> ;# :call CommentLineToEnd('### ')<CR>+
+noremap <silent> ,/ :call CommentLineToEnd('// ')<CR>+
+noremap <silent> ," :call CommentLineToEnd('" ')<CR>+
+noremap <silent> ,; :call CommentLineToEnd('; ')<CR>+
+noremap <silent> ,- :call CommentLineToEnd('-- ')<CR>+
+noremap <silent> ,* :call CommentLinePincer('/* ', ' */')<CR>+
+noremap <silent> ,< :call CommentLinePincer('<!-- ', ' -->')<CR>+
+
+" and/or Filetype specific mappings: Meta-c (Alt-c) and Meta-Shift-C
+
+autocmd FileType c    noremap <silent> <buffer> <M-c> :call CommentLineToEnd ('// ')<CR>+
+autocmd FileType c    noremap <silent> <buffer> <M-C> :call CommentLinePincer('/* ', ' */')<CR>+
+autocmd FileType make noremap <silent> <buffer> <M-c> :call CommentLineToEnd ('# ')<CR>+
+autocmd FileType html noremap <silent> <buffer> <M-c> :call CommentLinePincer('<!-- ', ' -->')<CR>+
+=== CUT HERE ===================================================================
+
+- you might add <unique> to prevent overwriting an existing mapping
+- mappings are created for normal, visual and operator-pending-mode, but
+  operator-mode makes no sense, so you might even use:
+
+    " map for normal and visual mode and not operator-mode with:
+    "   map
+    "   ounmap
+    " or:
+    "   nmap
+    "   vmap
+
+- here are examples for non-standard comments:
+
+    "   ^[.*\~]$ test all those magic characters $]~\*.[^
+    noremap <unique> <silent> ,= :call CommentLinePincer('^[.*\~]$ ', ' $]~\*.[^')<CR>+
+    "   #@!%-> some weird comment !!!
+    noremap <unique> <silent> ,@ :call CommentLinePincer('#@!%-> ', ' !!!')<CR>+
+    "   ### TODO: comment on what has to be done
+    noremap <unique> <silent> ,t :call CommentLineToEnd ('### TODO: ')<CR>+
+
+USAGE
+
+- assuming you have a mapping for ,# you can use it in normal or visual mode;
+  to comment three lines starting from the current one, you could either type:
+
+    ,#,#,#
+    3,#
+    Vjjj,#
+
+- one of my favorites: type 4,# to change:
+
+    result = 4711
+    for num in numlist:
+        result += num
+    #reduce (operator.add, numlist, 4711)
+
+    to:
+
+    #result = 4711
+    #for num in numlist:
+        #result += num
+    reduce (operator.add, numlist, 4711)
+
+- to comment a block of code which already has comments, just us different
+  comment chars, e.g. noremap <silent> ;# :call CommentLineToEnd('### ')<CR>+
+  please note the use of ; as an alternate leader.
+- for an one-timer you can even use command-line mode, e.g.
+
+    :call CommentLineToEnd('# obsolete> ')
+
+BUGS
+
+- + moves to the next line and beeps on last line in buffer
+- in gvim easy (gvim -y) + does not work
+
+SEE ALSO
+
+- for other comment script see the following Tips and Scripts with Additional
+  Notes (e.g. hints to use visual-block-mode to comment in one column or
+  adding a menu item to gVim)
+- Vim Tip #271
+- Vim Tip #369
+- Vim Script #473 BlockComment.vim
+- Vim Script #665 (#4) feraltogglecommentify.vim
+- Vim Script #23 EnhancedCommentify.vim
+- Vim Script #730 co.vim
+
+IMPLEMENTATION
+
+- the mappings use noremap to avoid expansion of + (move to next line);
+  <silent> prevent messages to appear in the status line, the use of
+  'literal string' instead of "normal string" saves some escaping, 
+  to use a single quote in comment characters you would need double quotes ("'")
+- matching is done magic, so there is no need to :set magic
+- Pseudocode for function CommentLinePincer('>>', '<<<')
+  (^ $ x I A stand for themselves):
+
+    save and set options to prevent automatic indenting, expansion of mappings
+    protect special regex characters
+    if current line matches ^ spaces >> anything <<< $
+        ^ 2x $ (3-1)left 3x     " remove comment
+    else
+        I >> A <<<              " add comment
+    restore options
+
+- uses only x I A ^ $ commands, so theres no problem with highlighting the
+  last search pattern, only register ". is set, repeat last command with .
+  is preserved
+
+TODO
+
+- combine the two functions into one with optional second argument
+- optional third argument for comment-style:
+    - 0: (default) comment in same column as line
+    - 1: comment in 1st column
+    - 2: comment two columns (or whatever length) left of indentation
+- don't comment empty lines
+
+HINTS (some additional notes for beginners)
+
+- your personal vimrc file and plugin directory might be different on other
+  systems, see Vim :help in chapter |usr_05.txt| "Set your settings" and
+  "Add a plugin"
+- to jump to the help chapters, position the cursor between the bars (|here|)
+  and type Ctrl-], to jump back type Ctrl-t; on some national keyboards you
+  might need this mapping for Ctrl-] and then use Control-+ instead:
+
+    :noremap <C-+> <C-]>
+
+- its recommended to set %HOME% on Windows systems
+- to see if the plugin is properly loaded type :function and scan the list
+- to see which mappings are already defined type :map and scan the list
+- to de-/comment with e.g. '#': type in normal mode anywhere on the line: ,#
+  the pause between , and # mustn't exceed half a second
+- these mappings slow down the normal ,-command (repeat last f-command),
+  it is activated only after half a second, but you can still type ,,,,
+  in rapid sucession
+- to comment a block of code, use visual mode: type V and move the cursor
+  down, then type ,#
+- if mapping <M-c> doesn't work (e.g. a Linux terminal on a Windows PC using
+  Exceed) you have to find out which keys correspond to Meta-c; just enter
+  Meta-c literally and see what is echoed on the screen; to enter a literal
+  character preceed it with ^V (which might be mapped to ^Q on Windows);
+  so in my case the mapping became:
+
+    autocmd FileType c noremap <silent> <buffer> <Esc>c :call CommentLineToEnd('// ')<CR>+
+
+
+vim:ts=4 sw=4 et ff=unix
+$Id: README,v 1.4 2004/03/28 21:15:23 Andreas Exp $
