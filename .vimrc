@@ -115,3 +115,7 @@ noremap <C-Right> <C-w>l
 " Render markdown buffer as html
 nnoremap <F8> :w ! markdown_py \| lynx -stdin<enter>
 
+" Syntastic (syntax checker plugin)
+let g:syntastic_mode_map = { 'mode': 'passive',
+      \ 'active_filetypes': ['ruby', 'python'],
+      \ 'passive_filetypes': ['puppet'] }
