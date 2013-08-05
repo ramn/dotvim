@@ -121,3 +121,6 @@ nnoremap <F8> :w ! markdown_py \| lynx -stdin<enter>
 let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['ruby', 'python'],
       \ 'passive_filetypes': ['puppet'] }
+
+" Split method parameter list in several lines
+nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR>
