@@ -72,6 +72,8 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 if (has('mac'))
   set clipboard=unnamed
+else
+  set clipboard=autoselectplus,exclude:cons\|linux
 endif
 
 " Map esc-w to write file
