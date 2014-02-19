@@ -72,7 +72,7 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 if (has('mac'))
   set clipboard=unnamed
-else
+elseif version >= 740
   set clipboard=autoselectplus,exclude:cons\|linux
 endif
 
