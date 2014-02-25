@@ -25,3 +25,6 @@
 [submodule "bundle/vim-inform7"]
 	path = bundle/vim-inform7
 	url = git@github.com:ramn/vim-inform7.git
+[submodule "vim-inform7-ramn"]
+	path = bundle/vim-inform7
+	url = git@github.com:ramn/vim-inform7.git
