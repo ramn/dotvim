@@ -22,3 +22,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-inform7"]
+	path = bundle/vim-inform7
+	url = git@github.com:ramn/vim-inform7.git
