@@ -28,3 +28,6 @@
 #[submodule "bundle/vim-inform7-ramn"]
 	#path = bundle/vim-inform7
 	#url = git@github.com:ramn/vim-inform7.git
+[submodule "bundle/clippo"]
+	path = bundle/clippo
+	url = https://github.com/gbigwood/Clippo.git
