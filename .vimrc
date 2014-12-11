@@ -128,3 +128,6 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 
 " Split method parameter list in several lines
 nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR>
+
+" Tagbar keybindings
+nnoremap <F6> :TagbarToggle<CR>
