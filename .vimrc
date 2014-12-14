@@ -87,8 +87,9 @@ nnoremap t :tabnew<CR>
 nnoremap T :tabclose<CR>
 
 
-" NERDTree ignores
+" NERDTree
 let NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeWinSize=41
 nnoremap <F12> :NERDTreeToggle<CR>
 
 
