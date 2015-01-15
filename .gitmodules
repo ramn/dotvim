@@ -43,3 +43,6 @@
 [submodule "bundle/rust.vim"]
 	path = bundle/rust.vim
 	url = https://github.com/wting/rust.vim.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git@github.com:vim-scripts/vim-coffee-script.git
