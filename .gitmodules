@@ -49,3 +49,6 @@
 [submodule "bundle/salt-vim"]
 	path = bundle/salt-vim
 	url = git@github.com:saltstack/salt-vim.git
+[submodule "bundle/swift-vim"]
+	path = bundle/swift-vim
+	url = git@github.com:Keithbsmiley/swift.vim.git
