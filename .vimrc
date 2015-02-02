@@ -26,6 +26,9 @@ set term=xterm
 colorscheme slate
 "set lines=62 columns=120 "sets window size
 
+let loaded_matchparen = 1
+set showmatch
+
 function CatchedChecktime()
     try
         checktime
