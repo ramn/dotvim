@@ -136,3 +136,6 @@ nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR>
 
 " Tagbar keybindings
 nnoremap <F6> :TagbarToggle<CR>
+
+" Make it unlikely to accidentally enter the horrible Ex mode
+nnoremap Q <nop>
