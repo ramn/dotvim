@@ -132,7 +132,10 @@ let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'passive_filetypes': ['puppet'] }
 
 " Split method parameter list in several lines
-nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR>
+" Best for Python
+" nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR>
+" Best for Scala
+nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR> :s/\v(.*)(\))/\1\r\2/<CR>
 
 " Tagbar keybindings
 nnoremap <F6> :TagbarToggle<CR>
