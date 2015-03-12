@@ -135,7 +135,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 " Best for Python
 " nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR>
 " Best for Scala
-nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/<CR> :s/, /,\r/g<CR> :s/\v(.*)(\))/\1\r\2/<CR>
+nnoremap <F7> :s/\v^(.{-}\()(.*)/\1\r\2/e<CR> :s/, /,\r/ge<CR> :s/\v(.*)(\))/\1\r\2/e<CR>
 
 " Tagbar keybindings
 nnoremap <F6> :TagbarToggle<CR>
