@@ -142,3 +142,6 @@ nnoremap <F6> :TagbarToggle<CR>
 
 " Make it unlikely to accidentally enter the horrible Ex mode
 nnoremap Q <nop>
+
+" Ctags
+set tags=./.tags,.tags,./tags,tags
