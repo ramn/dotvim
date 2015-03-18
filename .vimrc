@@ -30,12 +30,15 @@ colorscheme slate
 hi MatchParen cterm=none ctermbg=black ctermfg=magenta
 set showmatch
 
+try
 function CatchedChecktime()
     try
         checktime
     catch
     endtry
 endfunction
+catch
+endtry
 
 augroup myglobal
     autocmd!
