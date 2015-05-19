@@ -46,7 +46,7 @@ augroup myglobal
 augroup END
 
 set ic
-set foldmethod=marker
+set foldmethod=manual
 
 augroup myfiletypes
   " Clear old autocmds in group
