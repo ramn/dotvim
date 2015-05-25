@@ -13,6 +13,7 @@ set textwidth=0 " Turns off insertion of line breaks in long lines
 set formatoptions-=tc
 set ruler
 set backspace=indent,eol,start
+set relativenumber number
 
 set grepprg=git\ grep\ -n\ $*
 
@@ -149,5 +150,3 @@ nnoremap Q <nop>
 
 " Ctags
 set tags=./.tags,.tags,./tags,tags
-
-set relativenumber number
