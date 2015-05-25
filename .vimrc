@@ -14,6 +14,7 @@ set formatoptions-=tc
 set ruler
 set backspace=indent,eol,start
 set relativenumber number
+set nojoinspaces
 
 set grepprg=git\ grep\ -n\ $*
 
@@ -67,6 +68,8 @@ else
   set mouse=a
 endif
 
+" join without adding a space
+nmap J gJ
 map \c :call CommentLineToEnd('#')<CR>+
 map \\ :call CommentLineToEnd('//')<CR>+
 noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
