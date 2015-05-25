@@ -68,8 +68,6 @@ else
   set mouse=a
 endif
 
-" join without adding a space
-nmap J gJ
 map \c :call CommentLineToEnd('#')<CR>+
 map \\ :call CommentLineToEnd('//')<CR>+
 noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
