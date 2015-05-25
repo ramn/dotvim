@@ -149,3 +149,5 @@ nnoremap Q <nop>
 
 " Ctags
 set tags=./.tags,.tags,./tags,tags
+
+set relativenumber number
