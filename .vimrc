@@ -68,11 +68,18 @@ else
   set mouse=a
 endif
 
-map \c :call CommentLineToEnd('#')<CR>+
-map \\ :call CommentLineToEnd('//')<CR>+
-noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
-noremap \< :call CommentLinePincer('<!--', '-->')<CR>+
+
+" ToggleComment plugin config
+" map \c :call CommentLineToEnd('#')<CR>+
+" map \\ :call CommentLineToEnd('//')<CR>+
+" noremap \- :call CommentLineToEnd('--')<CR>+
+" noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
+" noremap \< :call CommentLinePincer('<!--', '-->')<CR>+
 " map ,* :call CommentLinePincer('/* ', ' */')<CR>+
+
+
+" vim-commentary config
+autocmd FileType sql set commentstring=--\ %s
 
 " Press Space to turn off highlighting and clear any message already
 " displayed.
