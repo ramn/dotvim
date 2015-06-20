@@ -119,7 +119,7 @@ let g:netrw_liststyle = 3
 let g:ctrlp_jump_to_buffer = 1
 let g:ctrlp_custom_ignore = {
 \   'file': '\.pyc$\|\.class$',
-\   'dir': 'target$'
+\   'dir': 'target$\|build$'
 \ }
 
 " Reselect visual block after indent/outdent
