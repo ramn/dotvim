@@ -25,7 +25,14 @@ filetype on " Enable filetype detection
 filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
 "compiler ruby " Enable compiler support for ruby
+
+if &term =~ '^screen'
+  " tmux knows the extended mouse mode
+  set ttymouse=xterm2
+endif
 set term=xterm
+
+
 colorscheme slate
 "set lines=62 columns=120 "sets window size
 
