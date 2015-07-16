@@ -28,7 +28,9 @@ filetype plugin on " Enable filetype-specific plugins
 
 if &term =~ '^screen'
   " tmux knows the extended mouse mode
-  set ttymouse=xterm2
+  " http://stackoverflow.com/questions/7000960/in-vim-why-doesnt-my-mouse-work-past-the-220th-column/19253251#19253251
+  set ttymouse=sgr
+  " set ttymouse=xterm2
 endif
 set term=xterm
 
