@@ -64,7 +64,7 @@ augroup myfiletypes
   autocmd!
   " autoindent with two spaces, always expand tabs
   autocmd FileType yaml set ai sw=2 sts=2 et
-  autocmd FileType rust set sw=2 sts=2 et tw=80
+  autocmd FileType rust set sw=4 sts=4 et tw=80
   autocmd FileType python set omnifunc=pythoncomplete#Complete
   autocmd FileType mail set wrap linebreak keywordprg=gnome-dictionary
 augroup END
