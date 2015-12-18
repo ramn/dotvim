@@ -100,7 +100,10 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 if (has('mac'))
   set clipboard=unnamed
 elseif version >= 704
-  set clipboard=autoselectplus,exclude:cons\|linux
+  " Regular yanks go to system clipboard
+  set clipboard=unnamedplus
+  " Visual yanks go to system mouse middlebutton clipboard
+  " set clipboard=autoselectplus,exclude:cons\|linux
 endif
 
 " Map esc-w to write file
