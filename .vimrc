@@ -63,11 +63,13 @@ augroup myfiletypes
   " Clear old autocmds in group
   autocmd!
   " autoindent with two spaces, always expand tabs
-  autocmd FileType yaml set ai sw=2 sts=2 et
-  autocmd FileType sql set ai sw=2 sts=2 et
-  autocmd FileType rust set sw=4 sts=4 et tw=80
-  autocmd FileType python set omnifunc=pythoncomplete#Complete
-  autocmd FileType mail set wrap linebreak keywordprg=gnome-dictionary
+  autocmd FileType yaml setlocal ai sw=2 sts=2 et
+  autocmd FileType sql setlocal ai sw=2 sts=2 et
+  autocmd FileType rust setlocal sw=4 sts=4 et tw=80
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType mail setlocal wrap linebreak keywordprg=gnome-dictionary
+  autocmd FileType text setlocal ai sw=2 sts=2 et
+  autocmd FileType sh setlocal ai sw=2 sts=2 et
 augroup END
 
 
