@@ -173,7 +173,7 @@ nnoremap <F6> :TagbarToggle<CR>
 nnoremap Q <nop>
 
 " Ctags
-set tags=./.tags,.tags,./tags,tags
+set tags=./.tags;,.tags;,./tags;,tags;
 
 " Bring up todo's in quickfix list
 noremap <leader>gt :grep! TODO\\\\\|FIXME <CR>:cw<CR>
