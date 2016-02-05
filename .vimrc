@@ -15,8 +15,10 @@ set ruler
 set backspace=indent,eol,start
 set relativenumber number
 set nojoinspaces
-
 set grepprg=git\ grep\ -n\ $*
+" Make search using lower case case insensitive, but if any upper case char
+" is included in the search string, the search is case sensitive.
+set smartcase
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
