@@ -179,3 +179,15 @@ set tags=./.tags;,.tags;,./tags;,tags;
 
 " Bring up todo's in quickfix list
 noremap <leader>gt :grep! TODO\\\\\|FIXME <CR>:cw<CR>
+
+" Color column toggle
+function! g:ToggleColorColumn()
+  if &colorcolumn != ''
+    setlocal colorcolumn&
+  else
+    " setlocal colorcolumn=+1
+    setlocal colorcolumn=80
+  endif
+endfunction
+" nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
+nnoremap <silent> <F9> :call g:ToggleColorColumn()<CR>
