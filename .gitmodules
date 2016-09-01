@@ -64,3 +64,6 @@
 [submodule "bundle/vim-rust"]
 	path = bundle/vim-rust
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "bundle/vim-abolish"]
+	path = bundle/vim-abolish
+	url = git@github.com:tpope/vim-abolish.git
