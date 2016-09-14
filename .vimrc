@@ -19,6 +19,7 @@ set grepprg=git\ grep\ -n\ $*
 " Make search using lower case case insensitive, but if any upper case char
 " is included in the search string, the search is case sensitive.
 set smartcase
+set breakindent
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
