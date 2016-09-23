@@ -193,3 +193,6 @@ function! g:ToggleColorColumn()
 endfunction
 " nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
 nnoremap <silent> <F9> :call g:ToggleColorColumn()<CR>
+
+" Style guide approved scaladoc indentation
+let g:scala_scaladoc_indent = 1
