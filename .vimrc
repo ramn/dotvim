@@ -74,6 +74,7 @@ augroup myfiletypes
   autocmd FileType text setlocal ai sw=2 sts=2 et
   autocmd FileType sh setlocal ai sw=2 sts=2 et
   autocmd Filetype gitcommit setlocal tw=80
+  autocmd FileType ocaml setlocal commentstring=(*%s*)
 augroup END
 
 
