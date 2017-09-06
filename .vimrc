@@ -97,6 +97,7 @@ endif
 
 " vim-commentary config
 autocmd FileType sql set commentstring=--\ %s
+autocmd FileType dot set commentstring=//\ %s
 nmap \\ gcc
 
 " Press Space to turn off highlighting and clear any message already
