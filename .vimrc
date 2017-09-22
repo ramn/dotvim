@@ -163,9 +163,9 @@ noremap <C-Right> <C-w>l
 nnoremap <F8> :w ! markdown \| lynx -stdin<enter>
 
 " Syntastic (syntax checker plugin)
-let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': ['ruby', 'python'],
-      \ 'passive_filetypes': ['puppet'] }
+" let g:syntastic_mode_map = { 'mode': 'passive',
+"       \ 'active_filetypes': ['ruby', 'python'],
+"       \ 'passive_filetypes': ['puppet', 'go'] }
 
 " Split method parameter list in several lines
 " Best for Python
