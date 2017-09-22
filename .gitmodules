@@ -67,3 +67,6 @@
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = git@github.com:tpope/vim-abolish.git
+[submodule "bundle/ctrl-p"]
+	path = bundle/ctrl-p
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
