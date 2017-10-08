@@ -100,6 +100,9 @@ endif
 " noremap \< :call CommentLinePincer('<!--', '-->')<CR>+
 " map ,* :call CommentLinePincer('/* ', ' */')<CR>+
 
+" Map key to comment out line
+nmap \\ gcc
+
 " Press Space to turn off highlighting and clear any message already
 " displayed.
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
