@@ -74,7 +74,13 @@ augroup myfiletypes
   autocmd FileType text setlocal ai sw=2 sts=2 et
   autocmd FileType sh setlocal ai sw=2 sts=2 et
   autocmd Filetype gitcommit setlocal tw=80
+
+  " vim-commentary config
+  autocmd FileType sql setlocal commentstring=--\ %s
+  autocmd FileType dot setlocal commentstring=//\ %s
+  autocmd FileType sbt setlocal commentstring=//\ %s
   autocmd FileType ocaml setlocal commentstring=(*%s*)
+  autocmd FileType cpp setlocal commentstring=//\ %s
 augroup END
 
 
@@ -93,13 +99,6 @@ endif
 " noremap \{ :call CommentLinePincer('{# ', ' #}')<CR>+
 " noremap \< :call CommentLinePincer('<!--', '-->')<CR>+
 " map ,* :call CommentLinePincer('/* ', ' */')<CR>+
-
-
-" vim-commentary config
-autocmd FileType sql set commentstring=--\ %s
-autocmd FileType dot set commentstring=//\ %s
-autocmd FileType sbt set commentstring=//\ %s
-nmap \\ gcc
 
 " Press Space to turn off highlighting and clear any message already
 " displayed.
