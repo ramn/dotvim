@@ -202,3 +202,5 @@ nnoremap <silent> <F9> :call g:ToggleColorColumn()<CR>
 
 " Style guide approved scaladoc indentation
 let g:scala_scaladoc_indent = 1
+
+let g:rust_recommended_style = 0
