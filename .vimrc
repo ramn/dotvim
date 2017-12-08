@@ -20,6 +20,7 @@ set grepprg=git\ grep\ -In\ $*
 " is included in the search string, the search is case sensitive.
 set smartcase
 set breakindent
+set nosmartindent
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
