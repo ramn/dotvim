@@ -204,3 +204,6 @@ nnoremap <silent> <F9> :call g:ToggleColorColumn()<CR>
 let g:scala_scaladoc_indent = 1
 
 let g:rust_recommended_style = 0
+
+" binds macro d
+let @d = 'iprintln!();hi"{:?}", '
