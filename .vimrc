@@ -206,4 +206,4 @@ let g:scala_scaladoc_indent = 1
 let g:rust_recommended_style = 0
 
 " binds macro d - debug print statement in Rust
-let @d = 'ieprintln!("{:?}", );b'
+let @d = 'ieprintln!("{:?}", );b'
