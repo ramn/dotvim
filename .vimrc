@@ -1,4 +1,8 @@
-source /etc/vim/vimrc
+" Source a global configuration file if available
+if filereadable("/etc/vim/vimrc")
+  source /etc/vim/vimrc
+endif
+
 
 call pathogen#infect()
 
