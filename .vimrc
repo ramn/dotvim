@@ -145,6 +145,7 @@ let g:netrw_altv = 1
 let g:netrw_liststyle = 3
 
 " ctrlp config
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 let g:ctrlp_jump_to_buffer = 1
 let g:ctrlp_custom_ignore = {
 \   'file': '\.pyc$\|\.class$',
