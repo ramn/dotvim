@@ -194,16 +194,17 @@ set tags=./.tags;,.tags;,./tags;,tags;
 noremap <leader>gt :grep! TODO\\\\\|FIXME <CR>:cw<CR>
 
 " Color column toggle
-function! g:ToggleColorColumn()
+function! g:ToggleColorColumn(col)
   if &colorcolumn != ''
     setlocal colorcolumn&
   else
     " setlocal colorcolumn=+1
-    setlocal colorcolumn=80
+    let &colorcolumn=a:col
   endif
 endfunction
 " nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
-nnoremap <silent> <F9> :call g:ToggleColorColumn()<CR>
+nnoremap <silent> <F9> :call g:ToggleColorColumn(80)<CR>
+nnoremap <silent> <F10> :call g:ToggleColorColumn(100)<CR>
 
 " Style guide approved scaladoc indentation
 let g:scala_scaladoc_indent = 1
