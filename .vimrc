@@ -199,7 +199,7 @@ function! g:ToggleColorColumn(col)
     setlocal colorcolumn&
   else
     " setlocal colorcolumn=+1
-    let &colorcolumn=a:col
+    execute "setlocal colorcolumn=".a:col
   endif
 endfunction
 " nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
