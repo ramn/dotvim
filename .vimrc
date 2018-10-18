@@ -3,7 +3,6 @@ if filereadable("/etc/vim/vimrc")
   source /etc/vim/vimrc
 endif
 
-
 call pathogen#infect()
 
 set nobackup
@@ -213,3 +212,4 @@ let g:rust_recommended_style = 0
 
 " binds macro d - debug print statement in Rust
 let @d = 'ieprintln!("{:?}", );b'
+let @u = 'iunimplemented!();b'
