@@ -167,7 +167,7 @@ noremap <C-Right> <C-w>l
 
 
 " Render markdown buffer as html
-nnoremap <F8> :w ! markdown \| lynx -stdin<enter>
+nnoremap <F8> :w ! pulldown-cmark \| lynx -stdin<enter>
 
 " Syntastic (syntax checker plugin)
 " let g:syntastic_mode_map = { 'mode': 'passive',
