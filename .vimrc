@@ -70,7 +70,7 @@ augroup myfiletypes
   " Clear old autocmds in group
   autocmd!
   " autoindent with two spaces, always expand tabs
-  autocmd FileType yaml setlocal ai sw=2 sts=2 et
+  autocmd FileType yaml setlocal ai sw=4 sts=4 et
   autocmd FileType sql setlocal ai sw=2 sts=2 et
   autocmd FileType rust setlocal sw=4 sts=4 et tw=99 nosmartindent cindent
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
