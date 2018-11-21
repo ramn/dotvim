@@ -214,3 +214,7 @@ let g:rust_recommended_style = 0
 " binds macro d - debug print statement in Rust
 let @d = 'ieprintln!("{:?}", );b'
 let @u = 'iunimplemented!();b'
+
+" vim-markdown config
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_no_default_key_mappings = 1
