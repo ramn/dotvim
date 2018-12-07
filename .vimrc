@@ -135,7 +135,6 @@ nnoremap T :tabclose<CR>
 
 " NERDTree
 let g:NERDTreeIgnore = ['\.pyc$']
-let g:NERDTreeWinSize=41
 let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeSortOrder=[]
 let g:NERDTreeDirArrowExpandable='+'
