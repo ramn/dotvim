@@ -1,1 +1,0 @@
-source ../plugin/lodgeit.vim
