@@ -77,8 +77,8 @@ augroup myfiletypes
   autocmd FileType mail setlocal wrap linebreak keywordprg=gnome-dictionary
   autocmd FileType text setlocal ai sw=2 sts=2 et
   autocmd FileType sh setlocal ai sw=2 sts=2 et
-  autocmd Filetype gitcommit setlocal tw=80
-  autocmd Filetype typescript setlocal sw=4 sts=4 et nosmartindent cindent
+  autocmd FileType gitcommit setlocal tw=80
+  autocmd FileType typescript setlocal sw=4 sts=4 et nosmartindent cindent
 
   " vim-commentary config
   autocmd FileType sql setlocal commentstring=--\ %s
