@@ -218,7 +218,7 @@ let g:rust_recommended_style = 0
 
 " binds macro d - debug print statement in Rust
 let @d = 'ieprintln!("{:?}", );b'
-let @u = 'iunimplemented!();b'
+let @u = 'iunimplemented!();=='
 
 " vim-markdown config
 let g:vim_markdown_folding_disabled = 1
