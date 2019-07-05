@@ -39,7 +39,10 @@ if &term =~ '^screen'
   set ttymouse=sgr
   " set ttymouse=xterm2
 endif
-set term=xterm
+
+if !has('nvim')
+  set term=xterm
+endif
 
 
 colorscheme slate
