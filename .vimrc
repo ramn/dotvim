@@ -127,14 +127,24 @@ elseif version >= 704
 endif
 
 " Map esc-w to write file
-nnoremap <Esc>w :w<CR>
-inoremap <Esc>w <Esc>:w<CR>
+if has("nvim")
+  nnoremap <A-w> :w<CR>
+  inoremap <A-w> <Esc>:w<CR>
+else
+  nnoremap <Esc>w :w<CR>
+  inoremap <Esc>w <Esc>:w<CR>
+endif
 
 " Mappings for tabs:
 " meta-t       = > :tabnew
 " meta-shift-t = > :tabclose
-nnoremap t :tabnew<CR>
-nnoremap T :tabclose<CR>
+if has("nvim")
+  nnoremap <A-t> :tabnew<CR>
+  nnoremap <A-T> :tabclose<CR>
+else
+  nnoremap <Esc>t :tabnew<CR>
+  nnoremap <Esc>T :tabclose<CR>
+endif
 
 
 " NERDTree
