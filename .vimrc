@@ -40,7 +40,7 @@ if &term =~ '^screen'
   " set ttymouse=xterm2
 endif
 
-if !has('nvim')
+if !has("nvim")
   set term=xterm
 endif
 
