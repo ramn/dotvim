@@ -36,7 +36,7 @@ filetype indent on " Enable filetype-specific indenting
 filetype plugin on " Enable filetype-specific plugins
 "compiler ruby " Enable compiler support for ruby
 
-if &term =~ '^screen'
+if &term =~ '^screen' && !has("nvim")
   " tmux knows the extended mouse mode
   " http://stackoverflow.com/questions/7000960/in-vim-why-doesnt-my-mouse-work-past-the-220th-column/19253251#19253251
   set ttymouse=sgr
