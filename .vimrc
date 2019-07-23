@@ -25,6 +25,9 @@ set smartcase
 set breakindent
 set nosmartindent
 
+" Don't scroll while searching
+set noincsearch
+
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
 filetype off " Shut it off - to reload it! Needed by pathogen.
