@@ -52,9 +52,9 @@ if !has("nvim")
   colorscheme slate
 else
   set background=dark
-  " colorscheme elflord
-  colorscheme slate
-  set termguicolors
+  colorscheme elflord
+  " colorscheme slate
+  " set termguicolors
 endif
 "set lines=62 columns=120 "sets window size
 
