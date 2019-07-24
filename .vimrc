@@ -27,6 +27,8 @@ set nosmartindent
 
 " Don't scroll while searching
 set noincsearch
+" Don't highlight search results
+set nohls
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
