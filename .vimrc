@@ -239,7 +239,10 @@ nnoremap <silent> <S-F9> :call g:ToggleColorColumn(100)<CR>
 " Style guide approved scaladoc indentation
 let g:scala_scaladoc_indent = 1
 
+" Rust config
 let g:rust_recommended_style = 0
+" let g:rustfmt_autosave = 1
+let g:rustfmt_command = 'rustfmt --edition=2018'
 
 " binds macro d - debug print statement in Rust
 let @d = 'ieprintln!("{:?}", );b'
