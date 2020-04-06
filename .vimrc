@@ -105,6 +105,35 @@ augroup myfiletypes
 augroup END
 
 
+"
+" Format bindings
+"
+function SetRustFormatBinding()
+  if has("nvim")
+    nnoremap <A-f> :RustFmt<CR>
+    inoremap <A-f> <Esc>:RustFmt<CR>
+  else
+    nnoremap <Esc>f :RustFmt<CR>
+    inoremap <Esc>f <Esc>:RustFmt<CR>
+  endif
+endfunction
+
+function SetTerraformFormatBinding()
+  if has("nvim")
+    nnoremap <A-f> :TerraformFmt<CR>
+    inoremap <A-f> <Esc>:TerraformFmt<CR>
+  else
+    nnoremap <Esc>f :TerraformFmt<CR>
+    inoremap <Esc>f <Esc>:TerraformFmt<CR>
+  endif
+endfunction
+
+augroup myfilebindings
+  autocmd FileType rust call SetRustFormatBinding()
+  autocmd FileType terraform call SetTerraformFormatBinding()
+augroup END
+
+
 " Are we in GVim or vim in Terminal?
 if (has("gui_macvim") || has("gui_gnome")) && has("gui_running")
   "
