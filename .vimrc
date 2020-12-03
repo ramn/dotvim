@@ -119,6 +119,18 @@ function SetRustFormatBinding()
   endif
 endfunction
 
+function SetCompileAndQuickErrorJumpBinding()
+  if has("nvim")
+    nnoremap <A-m> :make check<CR>:cw<CR>
+    nnoremap <A-n> :cn<CR>
+    nnoremap <A-p> :cp<CR>
+  else
+    nnoremap <Esc>m :make check<CR>:cw<CR>
+    nnoremap <Esc>n :cn<CR>
+    nnoremap <Esc>p :cp<CR>
+  endif
+endfunction
+
 function SetTerraformFormatBinding()
   if has("nvim")
     nnoremap <A-f> :TerraformFmt<CR>
