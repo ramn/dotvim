@@ -121,11 +121,11 @@ endfunction
 
 function SetCompileAndQuickErrorJumpBinding()
   if has("nvim")
-    nnoremap <A-m> :make check --tests<CR>:cw<CR>
+    nnoremap <A-m> :make check --workspace --tests<CR>:cw<CR>
     nnoremap <A-n> :cn<CR>
     nnoremap <A-p> :cp<CR>
   else
-    nnoremap <Esc>m :make check --tests<CR>:cw<CR>
+    nnoremap <Esc>m :make check --workspace --tests<CR>:cw<CR>
     nnoremap <Esc>n :cn<CR>
     nnoremap <Esc>p :cp<CR>
   endif
@@ -143,6 +143,7 @@ endfunction
 
 augroup myfilebindings
   autocmd FileType rust call SetRustFormatBinding()
+  autocmd FileType rust call SetCompileAndQuickErrorJumpBinding()
   autocmd FileType terraform call SetTerraformFormatBinding()
 augroup END
 
