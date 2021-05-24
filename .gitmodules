@@ -67,3 +67,6 @@
 [submodule "bundle/vim-jsx-typescript"]
 	path = bundle/vim-jsx-typescript
 	url = git@github.com:peitalin/vim-jsx-typescript.git
+[submodule "bundle/vim-markdown-gabrielelana"]
+	path = bundle/vim-markdown-gabrielelana
+	url = git@github.com:gabrielelana/vim-markdown.git
