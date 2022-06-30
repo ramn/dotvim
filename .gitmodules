@@ -73,3 +73,6 @@
 [submodule "bundle/gitignore"]
 	path = bundle/gitignore
 	url = git@github.com:vim-scripts/gitignore.git
+[submodule "bundle/vim-lsp"]
+	path = bundle/vim-lsp
+	url = git@github.com:prabirshrestha/vim-lsp.git
