@@ -60,7 +60,7 @@ else
 endif
 "set lines=62 columns=120 "sets window size
 
-hi MatchParen cterm=none ctermbg=black ctermfg=magenta
+hi MatchParen cterm=none ctermbg=black ctermfg=yellow
 hi Search term=reverse cterm=none ctermfg=black ctermbg=yellow
 set showmatch
 
