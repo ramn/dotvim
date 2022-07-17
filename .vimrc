@@ -287,12 +287,20 @@ let @u = 'iunimplemented!();=='
 " let g:vim_markdown_auto_insert_bullets = 0
 " let g:vim_markdown_new_list_item_indent = 0
 
+" preservim/vim-markdown config
+" let g:vim_markdown_folding_disabled = 1
+" let g:vim_markdown_no_default_key_mappings = 1
+" let g:vim_markdown_new_list_item_indent = 2
+
 " gabrielelana/vim-markdown.git
-let g:markdown_include_jekyll_support = 0
-let g:markdown_enable_mappings = 0
-let g:markdown_enable_insert_mode_mappings = 0
-let g:markdown_enable_spell_checking = 0
-let g:markdown_enable_input_abbreviations = 0
+" let g:markdown_include_jekyll_support = 0
+" let g:markdown_enable_mappings = 0
+" let g:markdown_enable_insert_mode_mappings = 0
+" let g:markdown_enable_spell_checking = 0
+" let g:markdown_enable_input_abbreviations = 0
+
+" tpope/vim-markdown
+
 
 " Protect against vulnerability
 " https://threatpost.com/linux-command-line-editors-high-severity-bug/145569/

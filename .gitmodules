@@ -76,3 +76,6 @@
 [submodule "bundle/vim-lsp"]
 	path = bundle/vim-lsp
 	url = git@github.com:prabirshrestha/vim-lsp.git
+[submodule "bundle/vim-markdown-tpope"]
+	path = bundle/vim-markdown-tpope
+	url = https://github.com/tpope/vim-markdown
