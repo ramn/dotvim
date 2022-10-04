@@ -79,3 +79,6 @@
 [submodule "bundle/vim-markdown-tpope"]
 	path = bundle/vim-markdown-tpope
 	url = https://github.com/tpope/vim-markdown
+[submodule "bundle/odin.vim"]
+	path = bundle/odin.vim
+	url = https://github.com/Tetralux/odin.vim.git
