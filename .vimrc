@@ -124,7 +124,7 @@ function SetRustBindings()
   endif
 endfunction
 
-function SetTerraformFormatBinding()
+function SetTerraformFormatBindings()
   if has("nvim")
     nnoremap <A-f> :TerraformFmt<CR>
     inoremap <A-f> <Esc>:TerraformFmt<CR>
@@ -134,9 +134,20 @@ function SetTerraformFormatBinding()
   endif
 endfunction
 
+function SetCBindings()
+  if has("nvim")
+    nnoremap <A-f> :%! clang-format<CR>
+    inoremap <A-f> <Esc>:%! clang-format<CR>
+  else
+    nnoremap <Esc>f :%! clang-format<CR>
+    inoremap <Esc>f <Esc>:%! clang-format<CR>
+  endif
+endfunction
+
 augroup myfilebindings
   autocmd FileType rust call SetRustBindings()
-  autocmd FileType terraform call SetTerraformFormatBinding()
+  autocmd FileType terraform call SetTerraformFormatBindings()
+  autocmd FileType c call SetCBindings()
 augroup END
 
 
