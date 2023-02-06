@@ -134,13 +134,19 @@ function SetTerraformFormatBindings()
   endif
 endfunction
 
+function CFormat()
+  let save_pos = getpos(".")
+  exe '%! clang-format'
+  call setpos(".", save_pos)
+endfunction
+
 function SetCBindings()
   if has("nvim")
-    nnoremap <A-f> :%! clang-format<CR>
-    inoremap <A-f> <Esc>:%! clang-format<CR>
+    nnoremap <A-f> :call CFormat()<CR>
+    inoremap <A-f> <Esc>:call CFormat()<CR>
   else
-    nnoremap <Esc>f :%! clang-format<CR>
-    inoremap <Esc>f <Esc>:%! clang-format<CR>
+    nnoremap <Esc>f :call CFormat()<CR>
+    inoremap <Esc>f <Esc>:call CFormat()<CR>
   endif
 endfunction
 
