@@ -52,7 +52,8 @@ endif
 
 
 if !has("nvim")
-  colorscheme slate
+  colorscheme slate_vim82
+  " colorscheme slate
 else
   set background=dark
   colorscheme elflord
