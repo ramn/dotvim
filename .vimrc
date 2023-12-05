@@ -151,10 +151,27 @@ function SetCBindings()
   endif
 endfunction
 
+function OdinFormat()
+  let save_pos = getpos(".")
+  exe '%! odinfmt -stdin=true %'
+  call setpos(".", save_pos)
+endfunction
+
+function SetOdinBindings()
+  if has("nvim")
+    nnoremap <A-f> :call OdinFormat()<CR>
+    inoremap <A-f> <Esc>:call OdinFormat()<CR>
+  else
+    nnoremap <Esc>f :call OdinFormat()<CR>
+    inoremap <Esc>f <Esc>:call OdinFormat()<CR>
+  endif
+endfunction
+
 augroup myfilebindings
   autocmd FileType rust call SetRustBindings()
   autocmd FileType terraform call SetTerraformFormatBindings()
   autocmd FileType c call SetCBindings()
+  autocmd FileType odin call SetOdinBindings()
 augroup END
 
 
