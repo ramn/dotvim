@@ -29,7 +29,6 @@ set nosmartindent
 set noincsearch
 " Highlight search results
 set hls
-set lcs=eol:↲,tab:»·,nbsp:␣
 
 set nocompatible " We're running Vim, not Vi!
 syntax on " Enable syntax highlighting
