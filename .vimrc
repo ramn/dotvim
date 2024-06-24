@@ -135,6 +135,7 @@ function SetTerraformFormatBindings()
   endif
 endfunction
 
+
 function CFormat()
   let save_pos = getpos(".")
   exe '%! clang-format'
@@ -150,6 +151,7 @@ function SetCBindings()
     inoremap <Esc>f <Esc>:call CFormat()<CR>
   endif
 endfunction
+
 
 function OdinFormat()
   let save_pos = getpos(".")
@@ -167,11 +169,30 @@ function SetOdinBindings()
   endif
 endfunction
 
+
+function GolangFormat()
+  let save_pos = getpos(".")
+  exe '%! gofmt %'
+  call setpos(".", save_pos)
+endfunction
+
+function SetGolangBindings()
+  if has("nvim")
+    nnoremap <A-f> :call GolangFormat()<CR>
+    inoremap <A-f> <Esc>:call GolangFormat()<CR>
+  else
+    nnoremap <Esc>f :call GolangFormat()<CR>
+    inoremap <Esc>f <Esc>:call GolangFormat()<CR>
+  endif
+endfunction
+
+
 augroup myfilebindings
   autocmd FileType rust call SetRustBindings()
   autocmd FileType terraform call SetTerraformFormatBindings()
   autocmd FileType c call SetCBindings()
   autocmd FileType odin call SetOdinBindings()
+  autocmd FileType go call SetGolangBindings()
 augroup END
 
 
