@@ -172,7 +172,7 @@ endfunction
 
 function GolangFormat()
   let save_pos = getpos(".")
-  exe '%! gofmt %'
+  exe '%! gofmt /dev/stdin'
   call setpos(".", save_pos)
 endfunction
 
