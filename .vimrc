@@ -171,9 +171,15 @@ endfunction
 
 
 function GolangFormat()
-  let save_pos = getpos(".")
-  exe '%! gofmt /dev/stdin'
-  call setpos(".", save_pos)
+  " let save_pos = getpos(".")
+  " exe '! gofmt -w "%" "%"'
+  cexpr system('gofmt -e -w ' . expand('%'))
+  if len(getqflist()) > 0
+    " cfirst
+  else
+    edit!
+  endif
+  " call setpos(".", save_pos)
 endfunction
 
 function SetGolangBindings()
