@@ -173,6 +173,7 @@ endfunction
 function GolangFormat()
   " let save_pos = getpos(".")
   " exe '! gofmt -w "%" "%"'
+  write
   cexpr system('gofmt -e -w ' . expand('%'))
   if len(getqflist()) > 0
     " cfirst
