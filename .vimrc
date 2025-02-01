@@ -89,7 +89,7 @@ augroup myfiletypes
   " autoindent with two spaces, always expand tabs
   autocmd FileType yaml setlocal ai sw=2 sts=2 et
   autocmd FileType sql setlocal ai sw=2 sts=2 et
-  autocmd FileType rust setlocal sw=4 sts=4 et tw=99 nosmartindent cindent
+  autocmd FileType rust setlocal sw=4 sts=4 et tw=99 nosmartindent cindent formatoptions-=r formatoptions-=o
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType mail setlocal wrap linebreak keywordprg=gnome-dictionary
   autocmd FileType text setlocal ai sw=2 sts=2 et
