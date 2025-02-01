@@ -11,7 +11,7 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set nowrap
-set dir=~/tmp
+set dir=~/tmp/vim_swp/
 set textwidth=0 " Turns off insertion of line breaks in long lines
 set formatoptions-=tc
 set ruler
