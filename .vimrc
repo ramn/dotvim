@@ -97,7 +97,7 @@ augroup myfiletypes
   autocmd FileType gitcommit setlocal tw=80
   autocmd FileType typescript setlocal sw=4 sts=4 et nosmartindent cindent
   autocmd FileType markdown setlocal tw=80
-  autocmd FileType odin setlocal sw=4 sts=4 et tw=80 nosmartindent cindent
+  autocmd FileType odin setlocal sw=4 sts=4 et tw=100 nosmartindent cindent
 
   " vim-commentary config
   autocmd FileType sql setlocal commentstring=--\ %s
